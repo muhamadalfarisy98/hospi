@@ -10,7 +10,8 @@
         'data/sequences.xml',
         'report/purchase_order.xml',
         'views/product_product_view.xml',
-        'views/account_custom.xml'
+        'views/account_custom.xml',
+        'views/inventory_custom.xml',
     ],
     'depends': ['purchase'],
     'auto_install': False,

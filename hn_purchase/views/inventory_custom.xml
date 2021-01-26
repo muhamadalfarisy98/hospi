@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+        <!-- stock.picking inherit form view -->
+        <record id="inherited_stock_picking_form_view" model="ir.ui.view">
+            <field name="name">stock.picking.inherit.view.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="total_koli"/>
+            </xpath>
+            <!-- <xpath expr="//page[@name='detailed_operations_shown']" position="inside">
+                <field name="koli"/>
+            </xpath> -->
+                <!-- <page name="detailed_operations_shown" position="inside">
+                    <field name="move_line_ids_without">
+                        <tree>
+                            <field name="koli"/>
+                        </tree>
+                    </field>
+                </page> -->
+            </field>
+        </record>
+    </data>
+</odoo>
