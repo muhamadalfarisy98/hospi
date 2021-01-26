@@ -12,17 +12,21 @@
             <xpath expr="//field[@name='origin']" position="after">
                 <field name="total_koli"/>
             </xpath>
-            <!-- <xpath expr="//page[@name='detailed_operations_shown']" position="inside">
-                <field name="koli"/>
-            </xpath> -->
-                <!-- <page name="detailed_operations_shown" position="inside">
-                    <field name="move_line_ids_without">
-                        <tree>
-                            <field name="koli"/>
-                        </tree>
-                    </field>
-                </page> -->
             </field>
         </record>
+
+        <!-- stock.move.line form view -->
+        <record id="inherit_stock_move_line_view_form" model="ir.ui.view">
+            <field name="name">stock.move.line.view.form</field>
+            <field name="model">stock.move.line</field>
+            <field name="inherit_id" ref="stock.view_stock_move_line_detailed_operation_tree"/>
+            <field name="arch" type="xml">
+            <xpath expr="//field[@name='qty_done']" position="after">
+                <field name="koli" string="Koli"/>
+            </xpath>
+            </field>
+        </record>
+
+
     </data>
 </odoo>

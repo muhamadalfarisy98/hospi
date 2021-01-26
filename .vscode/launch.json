@@ -10,8 +10,8 @@
             "console": "integratedTerminal",
             "program": "/opt/odoo/odoo14/odoo-bin",
             "args": [
-                "--config=/opt/odoo/config/odoo14.conf",
-                //"--update=rest_api",
+                "--config=/opt/odoo/config/odoo14_hospi.conf",
+                // "--update=hn_purchase",
                 //"--db-filter=102dke",
             ],
         }
