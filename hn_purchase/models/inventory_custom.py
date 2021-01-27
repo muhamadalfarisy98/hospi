@@ -4,7 +4,7 @@ from odoo import api, fields, models
 class KoliCustom(models.Model):
     _inherit = 'stock.picking'
 
-    total_koli = fields.Float(string='Total Koli',compute='_get_total_koli')
+    total_koli = fields.Float(string='Total Koli',compute='_get_total_koli',store=True)
     
     @api.depends('move_line_ids_without_package','move_line_ids_without_package.koli')
     def _get_total_koli(self):

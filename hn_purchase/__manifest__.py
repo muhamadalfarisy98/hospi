@@ -12,6 +12,8 @@
         'views/product_product_view.xml',
         'views/account_custom.xml',
         'views/inventory_custom.xml',
+        'views/inherit_stock_picking.xml',
+        
     ],
     'depends': ['purchase'],
     'auto_install': False,
