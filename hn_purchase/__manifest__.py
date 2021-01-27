@@ -13,6 +13,8 @@
         'views/account_custom.xml',
         'views/inventory_custom.xml',
         'views/inherit_stock_picking.xml',
+        'views/address_company_custom.xml',
+     
         
     ],
     'depends': ['purchase'],
